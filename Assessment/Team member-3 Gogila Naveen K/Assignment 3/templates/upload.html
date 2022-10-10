@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Upload Files</title>
+	<link rel="stylesheet" href="{{url_for('static',filename='css/style.css')}}">
+</head>
+
+<body>
+
+	<div class="section">
+		<div class="menu">
+			<ul class="menu-list">
+				<li><a href="{{url_for('index')}}">Index</a></li>
+				<li><a href="{{url_for('upload')}}">Upload</a></li>
+				<li><a href="{{url_for('deletefile')}}">Delete</a></li>
+			</ul>
+		</div>
+
+		<h1>IBM Upload File</h1>
+
+		<form action="/uploader" method="POST" enctype="multipart/form-data">
+			<input type="text" placeholder="Enter bucket name" name="bucket" />
+			<br>
+			<br>
+			<input type="text" placeholder="Enter file name" name="filename" />
+			<br>
+			<br>
+			<input class="file-inp" type="file" name="file" />
+			<br>
+			<br>
+			<input class="btn-submit" type="submit" />
+		</form>
+	</div>
+
+</body>
+
+</html>
